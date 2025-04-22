@@ -14,7 +14,7 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v4
       with: 
-          python-version: 3.8
+          python-version: 3.13
 
     - name: Install Bandit
       run: pip install bandit
@@ -39,7 +39,7 @@ jobs:
    - name: Set up Docker
      uses: docker/setup-docker-action@v4.3.0
      with:
-      version: '28.1'
+      version: '28.1.1'
 
    - name: Build Docker Image
      run: docker build -f Dockerfile -t myapp:latest .
